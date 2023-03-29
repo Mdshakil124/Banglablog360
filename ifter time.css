@@ -1,0 +1,470 @@
+:root {
+   --color-primary: #3a8232;
+   --color-secondary: #cce8c9;
+   --color-light: #e9f6e9;
+}
+.wrapper {
+   max-width: 1280px;
+   margin: 0 auto;
+   font-size: 24px;
+}
+.heading {
+   color: #D60000;
+   text-align: center;
+   padding: 32px 0;
+   font-size: 1.2em;
+}
+.ramadan-top {
+   display: flex;
+}
+.ramadan-top .info {
+   flex: 1;
+   display: flex;
+   background-color: var(--color-light);
+}
+.ramadan-top .adv {
+   width: 300px;
+   height: 250px;
+   margin-left: 32px;
+}
+.ramadan-day {
+   display: flex;
+   flex-direction: column;
+   width: 250px;
+   height: 250px;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-secondary);
+}
+.ramadan-day span {
+   line-height: .9em;
+}
+.ramadan-day span:first-of-type {
+   color: #3a8232;
+   font-size: 5rem;
+   font-weight: bold;
+}
+.ramadan-day span:last-of-type {
+   font-size: 1.5rem;
+}
+.ramadan-time {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   row-gap: 26px;
+}
+.district {
+   display: flex;
+   font-size: 1.8rem;
+}
+.district * {
+   font-size: 1.8rem;
+}
+.district > div {
+   position: relative;
+   display: flex;
+}
+.district > div .tooltip {
+   color: #FFF;
+   font-weight: bold;
+	font-size: .88rem;
+	position: absolute;
+	left: -162px;
+	top: -8px;
+	padding: 17px 18px 17px 14px;
+	background-color: #0572E6;
+	border-radius: 4px;
+	/* box-shadow: 0 1px 2px 1px rgba(0,0,0,.115); */
+   -webkit-filter: drop-shadow(1px 1px 4px #00000080);
+   filter: drop-shadow(1px 1px 4px #00000080);
+}
+.district > div .tooltip::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: -10px;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 14px solid #0572E6;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#district-dropdown {
+   font-size: 1.6rem;
+   font-family: var(--font-1);
+   color: var(--color-primary);
+	background: none;
+	border: 0;
+	outline: none;
+	appearance: none;
+   text-align: center;
+   border: 2px dashed rgba(0, 0, 0, 0.24);
+   border-radius: 5px;
+   display: inline-block;
+   margin-right: 12px;
+   cursor: pointer;
+}
+#district-dropdown option {
+   font-size: 1rem;
+}
+.ramadan-bottom {
+   display: flex;
+   margin-top: 32px;
+}
+.ramadan-bottom .calander {
+   flex: 1;
+   height: auto;
+}
+.ramadan-bottom .right-panel {
+   width: 300px;
+   height: auto;
+   background-color: silver;
+   margin-left: 32px;
+}
+.ramadan-bottom .calander table {
+   width: 100%;
+   border-spacing: 4px;
+   font-size: 1.125rem;
+   border-bottom: 2px solid var(--color-primary);
+}
+.ramadan-bottom .calander table thead {
+   color: var(--color-light);
+   height: 60px;
+   background-color: var(--color-primary);
+}
+.ramadan-bottom .calander table thead tr {
+   text-align: center;
+}
+.ramadan-bottom .calander table thead tr th:nth-child(2) {
+   width: 28%;
+}
+.ramadan-bottom .calander table tbody {
+   text-align: center;
+}
+.ramadan-bottom .calander table tbody tr {
+   height: 50px;
+}
+.ramadan-bottom .calander table tbody tr:nth-child(even) {
+   background-color: var(--color-light);
+}
+.countdown-area {
+   display: flex;
+   flex-direction: column;
+}
+.countdown-area .time {
+   font-weight: bold;
+   color: var(--color-primary);
+   display: flex;
+   column-gap: 8px;
+   align-items: center;
+   justify-content: center;
+}
+.countdown-area .time span {
+   font-size: 1.2rem;
+   padding: 5px 12px 4px;
+}
+.countdown-area .time span:first-child {
+   color: initial;
+   font-weight: initial;
+   padding-left: 0;
+}
+.countdown-area .time span:nth-child(1n+2) {
+   border-radius: 8px;
+   border: 2px solid var(--color-primary);
+   background-color: var(--color-secondary);
+}
+.countdown-area .countdown {
+   color: red;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+   /* padding: 26px 0 15px; */
+}
+.countdown-area .countdown div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 6px;
+}
+.countdown-area .countdown div p {
+   margin: 0;
+}
+.countdown-area .countdown div p:first-of-type {
+   color: #FFF;
+   font-size: 1.2rem;
+   font-weight: bold;
+   background-color: var(--color-primary);
+	text-align: center;
+	border-radius: 8px;
+   margin: 0;
+   width: 55px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.countdown-area .countdown div p:last-of-type {
+   /* color: #0080c7; */
+   color: #444;
+   font-size: .8rem;
+   margin-top: 5px;
+}
+.row-active {
+   font-weight: bold;
+}
+.prev-ramadan {
+   color: rgba(0, 0, 0, 0.5);
+}
+.t1-adv {
+   background-color: #FFF;
+   margin-bottom: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0 20px;
+   margin-top: 20px;
+
+}
+.t1-adv img {
+   width: 100%;
+   max-width: 970px;
+}
+.t1-adv img {
+   width: 100%;
+}
+.hide {
+   display: none !important;
+}
+.ramadan-bottom .right-panel {
+   background-color: #fff;
+}
+
+.t1-adv img:last-of-type {
+   display: none;
+}
+.t1-adv {
+   padding-bottom:20px; 
+   margin-bottom:0; 
+   border-bottom: 1px solid #e2e2e2
+}
+.t1-adv a { 
+   display: flex;
+}
+.ramadan-bottom .calander tbody tr td:nth-child(1) {
+   text-align: center;
+   padding-left: 0;
+}
+.ramadan-bottom .calander tbody tr td {
+   text-align: left;
+   padding-left: 1rem;
+}
+.ramadan-bottom .calander thead tr th:nth-child(4)  {
+   display: table-cell;
+}
+.ramadan-bottom .calander tbody tr td:nth-child(4)  {
+   display: table-cell;
+}
+.adv2 {
+   display: grid;
+   justify-content: center;
+   height: 250px;
+   margin-bottom: 32px;
+}
+.btn-box {
+   width: 100%;
+   display: grid;
+}
+.btn-box > a {
+   width: 100%;
+   background-color: var(--color-light);
+   border-bottom: 2px solid var(--color-primary);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 24px 0;
+   text-decoration: none;
+   color: rgba(0, 0, 0, 0.87);
+}
+.btn-box > a:hover {
+   color: #FFF;
+   background-color: var(--color-primary);
+}
+.btn-box .circle {
+   fill: var(--color-primary);
+}
+.btn-box .object {
+   fill: var(--color-light);
+}
+.btn-box > a:hover .circle {
+   fill: var(--color-light);
+}
+.btn-box > a:hover .object {
+   fill: var(--color-primary);
+}
+.btn-box > a:last-of-type {
+   border-bottom: none;
+}
+.btn-box p {
+   margin: 0;
+   margin-top: 2px;
+   font-weight: bold;
+   font-size: .9rem;
+}
+.btn-box svg {
+   height: 72px;
+}
+.dowa {
+   font-size: .9rem;
+}
+.dowa > div {
+   border-bottom: 2px solid var(--color-primary);
+   background-color: var(--color-light);
+   margin-top: 16px;
+}
+.dowa > div h4 {
+   margin: 0;
+   color: #FFF;
+   text-align: center;
+   background-color: var(--color-primary);
+   padding: 10px 0;
+}
+.dowa > div p {
+   margin: 0;
+   padding: 10px 16px;
+}
+@media only screen and (max-width: 1280px) {
+   .district * {
+      font-size: 1.4rem;
+   }
+}
+@media only screen and (max-width: 1024px) {
+   html {
+      font-size: 22px;
+   }
+   .district * {
+      font-size: 1.4rem;
+   }
+   .district {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+   }
+   #district-dropdown {
+      margin-right: 0;
+      column-gap: 10px;
+   }
+   .ramadan-day {
+      max-width: calc(25vw - .8rem);
+   }
+   .ramadan-time {
+      padding: 0 25px;
+   }
+   .ramadan-bottom {
+      margin-bottom: 20px;
+   }
+   .ramadan-bottom .calander table {
+      font-size: .8rem;
+   }
+   .district > div .tooltip {
+      left: -190px;
+   }
+   .ramadan-bottom .calander table thead tr th:nth-child(2) {
+      width: initial;
+   }
+} 
+@media only screen and (max-width: 767px) {
+   .ramadan-top .info {
+      width: 100%;
+   }
+   .ramadan-top {
+      flex-direction: column;
+      align-items: center;
+   }
+   .ramadan-top .adv {
+      margin-left: 0;
+      margin-top: 32px;
+   }
+   .ramadan-day {
+      max-width: 200px;
+   }
+   .ramadan-bottom {
+      flex-direction: column;
+   }
+   .ramadan-bottom .right-panel {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 32px;
+   }
+   .ramadan-bottom .calander table thead {
+      height: 50px;
+   }
+   .ramadan-bottom .calander table tbody tr {
+      height: 40px;
+   }
+   .btn-box {
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 16px;
+   }
+   .btn-box > a {
+      border-bottom: none;
+   }
+   .ramadan-bottom .calander table {
+      border-spacing: 2px;
+   }
+}
+@media only screen and (max-width: 480px) {
+   html {
+      font-size: 18px;
+   }
+   .ramadan-day {
+      width: 120px;
+      height: 180px;
+   }
+   .ramadan-day span:first-of-type {
+      font-size: 4rem;
+   }
+   .ramadan-day span:last-of-type {
+      font-size: 1.4rem;
+   }
+   .district * {
+      font-size: 1.1rem;
+   }
+   .ramadan-bottom .calander table {
+      font-size: .9rem;
+   }
+   .district > div .tooltip {
+      left: -152px;
+   }
+   .countdown-area .time {
+      column-gap: 5px;
+   }
+   .countdown-area .time span:first-child {
+      font-size: 1.1rem;
+      padding-right: 5px;
+   }
+   .countdown-area .time span {
+      font-size: 1.2rem;
+      padding: 3px 8px 2px;
+   }
+   .district > div .tooltip {
+      font-size: .8rem;
+   }
+   .ramadan-time {
+      padding: 0 10px;
+      row-gap: 10px;
+   }
+   .ramadan-bottom .calander thead tr th:nth-child(4)  {
+      display: none;
+   }
+   .ramadan-bottom .calander tbody tr td:nth-child(4)  {
+      display: none;
+   }
+}
+
+
+
+
